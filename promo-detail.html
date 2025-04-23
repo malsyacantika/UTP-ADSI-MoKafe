@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Promo: Matcha Series</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-[#1c1c1c] font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 shadow-sm border-b bg-white">
+    <div class="flex items-center space-x-2">
+      <img src="FotoHome/LOGOMOKAFE.png" alt="Logo" class="h-12 sm:h-8 w-auto" />
+    </div>
+    <ul class="flex space-x-6 text-sm sm:text-base">
+      <li><a href="index.html" class="text-gray-600 hover:text-pink-500">Home</a></li>
+      <li><a href="leaderboard.html" class="text-gray-600 hover:text-pink-500">Leaderboard</a></li>
+      <li><a href="event.html" class="text-gray-600 hover:text-pink-500">Event</a></li>
+      <li><a href="promo.html" class="text-pink-500 font-semibold">Promo</a></li>
+      <li><a href="about.html" class="text-gray-600 hover:text-pink-500">About Us</a></li>
+    </ul>
+    <div class="flex items-center space-x-4 relative">
+      <img src="FotoHome/avatar.jpg" class="h-8 w-8 rounded-full" alt="User" />
+      <div class="relative">
+        <button id="notifBtn" class="relative">
+          <i class="fas fa-bell text-xl text-gray-600"></i>
+          <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">3</span>
+        </button>
+        <div id="notifDropdown" class="hidden absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg p-4 z-10">
+          <h4 class="font-semibold text-gray-700 mb-2">Notifikasi</h4>
+          <ul class="text-sm space-y-2">
+            <li class="text-gray-600 border-b pb-2">Promo baru tersedia sekarang!</li>
+            <li class="text-gray-600 border-b pb-2">Event Senja Series dimulai hari ini</li>
+            <li class="text-gray-600">Jangan lewatkan leaderboard minggu ini!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="max-w-4xl mx-auto mt-10 px-4">
+    <img src="fotoPromo\promo2.png" alt="Promo Matcha Series by Janji Jiwa" class="w-full rounded-lg shadow-md mb-6">
+    
+    <h2 class="text-2xl font-bold mb-4">Promo: MATCHA SERIES by Janji Jiwa</h2>
+  
+    <p class="mb-2"><strong>Periode Promo:</strong></p>
+    <p class="mb-4">Tanggal: 1 April – 30 April 2025<br>Dapatkan harga spesial selama periode terbatas ini!</p>
+  
+    <p class="font-semibold mb-2">Varian Menu & Harga:</p>
+    <ul class="list-decimal list-inside mb-4">
+      <li>Sweet Hazelnut Matcha <span class="text-sm text-gray-600">(25K → 20K)</span><br>
+        <span class="text-sm text-gray-700">Perpaduan matcha dengan sentuhan manis dan aroma hazelnut yang khas. Super creamy!</span>
+      </li>
+      <li class="mt-2">Dirty Matcha Regal <span class="text-sm text-gray-600">(25K → 22K)</span><br>
+        <span class="text-sm text-gray-700">Matcha dengan campuran biskuit Regal dan espresso yang bold. Unik dan nikmat!</span>
+      </li>
+    </ul>
+  
+    <p class="font-semibold mb-2">Catatan:</p>
+    <ul class="list-disc list-inside text-sm text-gray-700">
+      <li>Promo berlaku selama persediaan masih ada.</li>
+      <li>Tidak dapat digabung dengan promo lainnya.</li>
+    </ul>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="bg-white mt-12 py-10 px-6 border-t text-sm">
+    <div class="flex flex-col md:flex-row justify-between gap-10">
+      <div>
+        <img src="FotoHome/LOGOMOKAFE.png" alt="Logo" class="h-8 mb-2" />
+        <p class="font-semibold">Customer Center</p>
+        <p>Gedung Graha Ganesha<br>Jl. Hayam Wuruk No. 28, Jakarta Pusat</p>
+        <p>0812-1111-8456</p>
+      </div>
+      <div>
+        <p class="font-semibold">Consumer Complaints Service</p>
+        <p>Ministry of Trade of the Republic of Indonesia</p>
+        <p>WhatsApp Ditjen PKTN: 0853-1111-1010</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const notifBtn = document.getElementById('notifBtn');
+    const notifDropdown = document.getElementById('notifDropdown');
+
+    notifBtn.addEventListener('click', () => {
+      notifDropdown.classList.toggle('hidden');
+    });
+
+    window.addEventListener('click', (e) => {
+      if (!notifBtn.contains(e.target) && !notifDropdown.contains(e.target)) {
+        notifDropdown.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

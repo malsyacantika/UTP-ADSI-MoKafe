@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Index - home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-[#1c1c1c] font-sans">
+  
+<!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 shadow-sm border-b bg-white">
+    <div class="flex items-center space-x-2">
+      <img src="FotoHome\LOGOMOKAFE.png" alt="Logo" class="h-12 sm:h-8 w-auto" />
+    </div>
+    <ul class="flex space-x-6 text-sm sm:text-base">
+      <li><a href="index.html" class="text-pink-500 font-semibold">Home</a></li>
+      <li><a href="leaderboard.html" class="text-gray-600 hover:text-pink-500">Leaderboard</a></li>
+      <li><a href="event.html" class="text-gray-600 hover:text-pink-500">Event</a></li>
+      <li><a href="promo.html" class="text-gray-600 hover:text-pink-500">Promo</a></li>
+      <li><a href="about.html" class="text-gray-600 hover:text-pink-500">About Us</a></li>
+    </ul>  
+<!-- User Section dengan Notifikasi -->
+<div class="flex items-center space-x-4 relative">
+  <img src="FotoHome/avatar.jpg" class="h-8 w-8 rounded-full" alt="User" />
+
+  <!-- Button Notifikasi -->
+  <div class="relative">
+    <button id="notifBtn" class="relative">
+      <i class="fas fa-bell text-xl text-gray-600"></i>
+      <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">3</span>
+    </button>
+
+    <!-- Dropdown Notifikasi -->
+    <div id="notifDropdown" class="hidden absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg p-4 z-10">
+      <h4 class="font-semibold text-gray-700 mb-2">Notifikasi</h4>
+      <ul class="text-sm space-y-2">
+        <li class="text-gray-600 border-b pb-2">Promo baru tersedia sekarang!</li>
+        <li class="text-gray-600 border-b pb-2">Event Senja Series dimulai hari ini</li>
+        <li class="text-gray-600">Jangan lewatkan leaderboard minggu ini!</li>
+      </ul>
+    </div>
+  </div>
+</div>
+  </nav>
+  
+ <!-- Leaderboard Section -->
+ <section class="text-center py-9 px-2">
+  <h2 class="text-2xl font-bold mb-10">Leaderboard Of The Week</h2>
+  <div class="flex justify-center gap-8 items-end mb-8">
+    <!-- 2nd Place -->
+    <div class="bg-white rounded-xl shadow-md p-6 w-40">
+      <img src="FotoHome/kopken.png" alt="Kopi Kenangan" class="mx-auto h-12 mb-3" />
+      <p class="font-semibold">Kopi Kenangan</p>
+      <a href="#" class="text-sm text-pink-600 font-semibold">Explore More →</a>
+      <div class="text-2xl font-bold mt-3">2</div>
+    </div>
+    <!-- 1st Place -->
+    <div class="bg-white rounded-xl shadow-lg p-6 w-44 border-2 border-pink-500">
+      <img src="FotoHome/nuju.png" alt="Nuju Caffe" class="mx-auto h-12 mb-3" />
+      <p class="font-semibold">Nuju Caffe</p>
+      <a href="#" class="text-sm text-pink-600 font-semibold">Explore More →</a>
+      <div class="text-2xl font-bold mt-3">1</div>
+    </div>
+    <!-- 3rd Place -->
+    <div class="bg-white rounded-xl shadow-md p-6 w-40">
+      <img src="FotoHome/janjiw.png" alt="Janji Jiwa" class="mx-auto h-12 mb-3" />
+      <p class="font-semibold">Janji Jiwa</p>
+      <a href="#" class="text-sm text-pink-600 font-semibold">Explore More →</a>
+      <div class="text-2xl font-bold mt-3">3</div>
+    </div>
+  </div>
+    <div class="mt-6">
+      <a href="leaderboard.html" class="text-sm text-pink-600 font-semibold">View All</a>
+    </div>
+  </section>
+
+<!-- Search and Filter -->
+<section class="bg-gray-100 px-6 py-6 mb-10">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+    
+    <!-- Category Dropdown -->
+    <select class="h-12 px-4 rounded-lg border border-gray-300 shadow-sm w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-pink-400">
+      <option disabled selected>Select Category</option>
+      <option>Tempat Nugas</option>
+      <option>Tempat Rapat</option>
+      <option>Live Music</option>
+      <option>Date</option>
+    </select>
+
+    <!-- Search Input -->
+    <div class="relative w-full sm:w-[300px]">
+      <input 
+        type="text" 
+        placeholder="Search Cafe..." 
+        class="h-12 w-full px-4 pr-10 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-400" 
+      />
+      <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-pink-500 hover:text-pink-600">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+  
+       <!-- Cafe Cards Grid -->
+       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <img src="FotoHome\foregambar.png" alt="Fore Coffe" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold mb-2">Fore Coffe - Antasari</h3>
+            <a href="#" class="text-sm text-pink-600">Read More →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <img src="FotoHome\nujugambar.png" alt="Nuju Coffee HQ, Enggal" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold mb-2">Nuju Coffee HQ - Enggal</h3>
+            <a href="#" class="text-sm text-pink-600">Read More →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <img src="FotoHome\kopkengambar.png" alt="Kopi Kenangan, Ahmad Yani" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold mb-2">Kopi Kenangan - Antasari</h3>
+            <a href="cafe.html" class="text-sm text-pink-600">Read More →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <img src="FotoHome\janjiwgambar.png" alt="Janji Jiwa dan Jiwa Toast" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold mb-2">Janji Jiwa dan Jiwa Toast - UNILA Jilid 323</h3>
+            <a href="#" class="text-sm text-pink-600">Read More →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <img src="FotoHome\liepsgambar.png" alt="Lieps Cafe" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold mb-2">Liep's Cafe</h3>
+            <a href="#" class="text-sm text-pink-600">Read More →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <img src="FotoHome\habbitsgambar.png" alt="The habits coffee" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold mb-2">The habits coffee</h3>
+            <a href="#" class="text-sm text-pink-600">Read More →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <img src="FotoHome\muara.png" alt="Muara Cafe & Space" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold mb-2">Muara Cafe & Space</h3>
+            <a href="#" class="text-sm text-pink-600">Read More →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <img src="FotoHome\gadecofe.png" alt="The Gade Coffee & Gold" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold mb-2">The Gade Coffee & Gold</h3>
+            <a href="#" class="text-sm text-pink-600">Read More →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <img src="FotoHome\towncafe.png" alt="New Town Coffee" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold mb-2">New Town Coffee</h3>
+            <a href="#" class="text-sm text-pink-600">Read More →</a>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white mt-12 py-10 px-6 border-t text-sm">
+    <div class="flex flex-col md:flex-row justify-between gap-8">
+      <div>
+        <img src="FotoHome\LOGOMOKAFE.png" alt="Logo" class="h-8 mb-2" />
+        <p class="font-semibold">Customer Center</p>
+        <p>Gedung Graha Ganesha<br>Jl. Hayam Wuruk No. 28, Jakarta Pusat</p>
+        <p>0812-1111-8456</p>
+      </div>
+      <div>
+        <p class="font-semibold">Consumer Complaints Service</p>
+        <p>Ministry of Trade of the Republic of Indonesia</p>
+        <p>WhatsApp Ditjen PKTN: 0853-1111-1010</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const notifBtn = document.getElementById('notifBtn');
+    const notifDropdown = document.getElementById('notifDropdown');
+  
+    notifBtn.addEventListener('click', () => {
+      notifDropdown.classList.toggle('hidden');
+    });
+  
+    window.addEventListener('click', (e) => {
+      if (!notifBtn.contains(e.target) && !notifDropdown.contains(e.target)) {
+        notifDropdown.classList.add('hidden');
+      }
+    });
+  </script>
+  
+</body>
+</html>

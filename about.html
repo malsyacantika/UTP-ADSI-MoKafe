@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>About Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-[#1c1c1c] font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 shadow-sm border-b bg-white">
+    <div class="flex items-center space-x-2">
+      <img src="FotoHome/LOGOMOKAFE.png" alt="Logo" class="h-12 sm:h-8 w-auto" />
+    </div>
+    <ul class="flex space-x-6 text-sm sm:text-base">
+      <li><a href="index.html" class="text-gray-600 hover:text-pink-500">Home</a></li>
+      <li><a href="leaderboard.html" class="text-gray-600 hover:text-pink-500">Leaderboard</a></li>
+      <li><a href="event.html" class="text-gray-600 hover:text-pink-500">Event</a></li>
+      <li><a href="promo.html" class="text-gray-600 hover:text-pink-500">Promo</a></li>
+      <li><a href="about.html" class="text-pink-500 font-semibold">About Us</a></li>
+    </ul>
+<!-- User Section dengan Notifikasi -->
+<div class="flex items-center space-x-4 relative">
+  <img src="FotoHome/avatar.jpg" class="h-8 w-8 rounded-full" alt="User" />
+
+  <!-- Button Notifikasi -->
+  <div class="relative">
+    <button id="notifBtn" class="relative">
+      <i class="fas fa-bell text-xl text-gray-600"></i>
+      <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">3</span>
+    </button>
+
+    <!-- Dropdown Notifikasi -->
+    <div id="notifDropdown" class="hidden absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg p-4 z-10">
+      <h4 class="font-semibold text-gray-700 mb-2">Notifikasi</h4>
+      <ul class="text-sm space-y-2">
+        <li class="text-gray-600 border-b pb-2">Promo baru tersedia sekarang!</li>
+        <li class="text-gray-600 border-b pb-2"> Event Senja Series dimulai hari ini</li>
+        <li class="text-gray-600"> Jangan lewatkan leaderboard minggu ini!</li>
+      </ul>
+    </div>
+  </div>
+</div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="text-center py-9 px-2 max-w-5xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-10 animate-fade-in">Tentang Kami</h2>
+    <p class="text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto animate-fade-in delay-100">
+      <span class="font-semibold text-pink-500">MOKAFE</span> adalah platform yang merekomendasikan cafe-cafe terbaik pilihan. Kami hadir untuk memberikan pengalaman terbaik lewat kurasi tempat yang nyaman, cita rasa berkualitas, dan pelayanan yang ramah untuk semua pelanggan.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center text-left">
+      <img src="about.jpg" alt="Tentang Kami" class="rounded-xl shadow-lg w-full animate-fade-in delay-200">
+      <div class="animate-fade-in delay-300">
+        <h3 class="text-2xl font-semibold mb-4 text-pink-600">Visi Kami</h3>
+        <p class="text-gray-700 mb-6">
+          Menjadi pelopor website rekomendasi tempat modern yang dikenal di seluruh Indonesia melalui layanan inovatif dan kualitas unggul.
+        </p>
+        <h3 class="text-2xl font-semibold mb-4 text-pink-600">Misi Kami</h3>
+        <ul class="space-y-3 text-gray-700 text-base">
+          <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i> Menyediakan informasi terpercaya tentang cafe terbaik.</li>
+          <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i> Membantu pelanggan menemukan tempat yang nyaman dan sesuai gaya mereka.</li>
+          <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i> Mendorong pertumbuhan UMKM lewat promosi digital yang berdampak.</li>
+          <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i> Menjaga standar kualitas dengan sistem kurasi yang selektif.</li>
+          <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i> Membangun komunitas pecinta cafe yang aktif dan inspiratif.</li>
+          <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i> Terus berinovasi dalam menyajikan pengalaman pengguna terbaik.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <style>
+    @keyframes fade-in {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  
+    .animate-fade-in {
+      animation: fade-in 0.8s ease forwards;
+      opacity: 0;
+    }
+  
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+  </style>
+
+  <!-- Footer -->
+  <footer class="bg-white mt-12 py-10 px-6 border-t text-sm">
+    <div class="flex flex-col md:flex-row justify-between gap-10">
+      <div>
+        <img src="FotoHome/LOGOMOKAFE.png" alt="Logo" class="h-8 mb-2" />
+        <p class="font-semibold">Customer Center</p>
+        <p>Gedung Graha Ganesha<br>Jl. Hayam Wuruk No. 28, Jakarta Pusat</p>
+        <p>0812-1111-8456</p>
+      </div>
+      <div>
+        <p class="font-semibold">Consumer Complaints Service</p>
+        <p>Ministry of Trade of the Republic of Indonesia</p>
+        <p>WhatsApp Ditjen PKTN: 0853-1111-1010</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const notifBtn = document.getElementById('notifBtn');
+    const notifDropdown = document.getElementById('notifDropdown');
+  
+    notifBtn.addEventListener('click', () => {
+      notifDropdown.classList.toggle('hidden');
+    });
+  
+    window.addEventListener('click', (e) => {
+      if (!notifBtn.contains(e.target) && !notifDropdown.contains(e.target)) {
+        notifDropdown.classList.add('hidden');
+      }
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Event</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-[#1c1c1c] font-sans">
+
+<!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 shadow-sm border-b bg-white">
+    <div class="flex items-center space-x-2">
+      <img src="FotoHome/LOGOMOKAFE.png" alt="Logo" class="h-12 sm:h-8 w-auto" />
+    </div>
+    <ul class="flex space-x-6 text-sm sm:text-base">
+      <li><a href="index.html" class="text-gray-600 hover:text-pink-500">Home</a></li>
+      <li><a href="leaderboard.html" class="text-gray-600 hover:text-pink-500">Leaderboard</a></li>
+      <li><a href="event.html" class="text-pink-500 font-semibold">Event</a></li>
+      <li><a href="promo.html" class="text-gray-600 hover:text-pink-500">Promo</a></li>
+      <li><a href="about.html" class="text-gray-600 hover:text-pink-500">About Us</a></li>
+    </ul>
+<!-- User Section dengan Notifikasi -->
+<div class="flex items-center space-x-4 relative">
+  <img src="FotoHome/avatar.jpg" class="h-8 w-8 rounded-full" alt="User" />
+
+  <!-- Button Notifikasi -->
+  <div class="relative">
+    <button id="notifBtn" class="relative">
+      <i class="fas fa-bell text-xl text-gray-600"></i>
+      <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">3</span>
+    </button>
+
+    <!-- Dropdown Notifikasi -->
+    <div id="notifDropdown" class="hidden absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg p-4 z-10">
+      <h4 class="font-semibold text-gray-700 mb-2">Notifikasi</h4>
+      <ul class="text-sm space-y-2">
+        <li class="text-gray-600 border-b pb-2"> Promo baru tersedia sekarang!</li>
+        <li class="text-gray-600 border-b pb-2"> Event Senja Series dimulai hari ini</li>
+        <li class="text-gray-600"> Jangan lewatkan leaderboard minggu ini!</li>
+      </ul>
+    </div>
+  </div>
+</div>
+  </nav>
+
+  <!-- Event Section -->
+  <section class="text-center py-9 px-2 max-w-5xl mx-auto">
+    <div class="max-w-screen-xl mx-auto space-y-6">
+      <!-- Baris atas: 2 kolom -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <a href="event-detail.html">
+          <img src="fotoEvent/event 1 1.png" alt="Event 1" class="rounded-xl shadow-md">
+        </a>        
+        <img src="fotoEvent/event 2 1.png" alt="Event 2" class="rounded-xl shadow-md">
+        <img src="fotoEvent/event 3 1.png" alt="Event 3" class="rounded-xl shadow-md">
+        <img src="fotoEvent/event 5 1.png" alt="Event 5" class="rounded-xl shadow-md">
+      </div>
+  
+      <!-- Baris bawah: 4 kolom -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <img src="fotoEvent/event 4 1.png" alt="Event 4" class="rounded-xl shadow-md">
+        <img src="fotoEvent/event 6 1.png" alt="Event 6" class="rounded-xl shadow-md aspect-square object-cover">
+        <img src="fotoEvent/event 4 1.png" alt="Event 4" class="rounded-xl shadow-md aspect-square object-cover">
+        <img src="fotoEvent/event 6 1.png" alt="Event 6" class="rounded-xl shadow-md aspect-square object-cover">
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Footer -->
+  <footer class="bg-white py-10 px-6 border-t text-sm">
+    <div class="flex flex-col md:flex-row justify-between gap-10">
+      <div>
+        <img src="FotoHome/LOGOMOKAFE.png" alt="Logo" class="h-8 mb-2" />
+        <p class="font-semibold">Customer Center</p>
+        <p>Gedung Graha Ganesha<br>Jl. Hayam Wuruk No. 28, Jakarta Pusat</p>
+        <p>0812-1111-8456</p>
+      </div>
+      <div>
+        <p class="font-semibold">Consumer Complaints Service</p>
+        <p>Ministry of Trade of the Republic of Indonesia</p>
+        <p>WhatsApp Ditjen PKTN: 0853-1111-1010</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const notifBtn = document.getElementById('notifBtn');
+    const notifDropdown = document.getElementById('notifDropdown');
+  
+    notifBtn.addEventListener('click', () => {
+      notifDropdown.classList.toggle('hidden');
+    });
+  
+    window.addEventListener('click', (e) => {
+      if (!notifBtn.contains(e.target) && !notifDropdown.contains(e.target)) {
+        notifDropdown.classList.add('hidden');
+      }
+    });
+  </script>
+  
+</body>
+</html>
