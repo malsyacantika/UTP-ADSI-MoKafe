@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>About Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-[#1c1c1c] font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 shadow-sm border-b bg-white">
+    <div class="flex items-center space-x-2">
+      <img src="FotoHome/LOGOMOKAFE.png" alt="Logo" class="h-12 sm:h-8 w-auto" />
+    </div>
+    <ul class="flex space-x-6 text-sm sm:text-base">
+      <li><a href="index.html" class="text-gray-600 hover:text-pink-500">Home</a></li>
+      <li><a href="leaderboard.html" class="text-gray-600 hover:text-pink-500">Leaderboard</a></li>
+      <li><a href="event.html" class="text-gray-600 hover:text-pink-500">Event</a></li>
+      <li><a href="promo.html" class="text-gray-600 hover:text-pink-500">Promo</a></li>
+      <li><a href="about.html" class="text-gray-600 hover:text-pink-500">About Us</a></li>
+    </ul>
+    <div class="flex items-center space-x-4 relative">
+      <img src="FotoHome\avamalsya.jpg" class="h-8 w-8 rounded-full" alt="User" />
+      <div class="relative">
+        <button id="notifBtn" class="relative">
+          <i class="fas fa-bell text-xl text-gray-600"></i>
+          <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">3</span>
+        </button>
+        <div id="notifDropdown" class="hidden absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg p-4 z-10">
+          <h4 class="font-semibold text-gray-700 mb-2">Notifikasi</h4>
+          <ul class="text-sm space-y-2">
+            <li class="text-gray-600 border-b pb-2">Promo baru tersedia sekarang!</li>
+            <li class="text-gray-600 border-b pb-2">Event Senja Series dimulai hari ini</li>
+            <li class="text-gray-600">Jangan lewatkan leaderboard minggu ini!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="text-center py-8">
+    <img src="FotoHome\avamalsya.jpg" alt="Avatar" class="w-24 h-24 mx-auto rounded-full">
+    <h1 class="text-2xl font-semibold mt-4">Malsya</h1>
+    <div class="mt-2 space-x-4 text-center">
+      <button onclick="showSection('profile')" class="font-medium border-b-2 pb-1" id="profileTab">Profile</button>
+      <button onclick="showSection('cafe')" class="text-gray-500 hover:text-pink-500 font-medium" id="cafeTab">Cafe Favorite</button>
+    </div>
+  </section>
+  <section id="profileSection" class="max-w-md mx-auto my-10 border rounded-xl p-6 bg-white space-y-4">
+    <div class="border-b pb-3 text-center font-medium">malsya11</div>
+    <div class="flex items-center justify-start space-x-3 text-gray-700 text-sm cursor-pointer hover:text-pink-500">
+      <i class="fas fa-right-from-bracket"></i>
+      <span>Logout</span>
+    </div>
+  </section>
+  <section id="cafeSection" class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 hidden">
+    <!-- Cafe 1 -->
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="FotoHome/kopkengambar.png" alt="Kopi Kenangan" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-lg font-semibold">Kopi Kenangan – Ahmad Yani</h2>
+        <p class="text-sm text-gray-600 mt-2">Tempat nyaman, aesthetic, cocok buat nongkrong atau kerja remote.</p>
+        <a href="cafe.html" class="inline-block mt-4 text-pink-500 font-medium hover:underline">Read More →</a>
+      </div>
+    </div>
+    <!-- Cafe 2 -->
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="FotoHome/foregambar.png" alt="Fore Coffee" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-lg font-semibold">Fore Coffee – Antasari</h2>
+        <p class="text-sm text-gray-600 mt-2">Konsep modern dan minimalis, cocok untuk cari suasana tenang.</p>
+        <a href="#" class="inline-block mt-4 text-pink-500 font-medium hover:underline">Read More →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white mt-12 py-10 px-6 border-t text-sm">
+    <div class="flex flex-col md:flex-row justify-between gap-10">
+      <div>
+        <img src="FotoHome/LOGOMOKAFE.png" alt="Logo" class="h-8 mb-2" />
+        <p class="font-semibold">Customer Center</p>
+        <p>Gedung Graha Ganesha<br>Jl. Hayam Wuruk No. 28, Jakarta Pusat</p>
+        <p>0812-1111-8456</p>
+      </div>
+      <div>
+        <p class="font-semibold">Consumer Complaints Service</p>
+        <p>Ministry of Trade of the Republic of Indonesia</p>
+        <p>WhatsApp Ditjen PKTN: 0853-1111-1010</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const notifBtn = document.getElementById('notifBtn');
+    const notifDropdown = document.getElementById('notifDropdown');
+
+    notifBtn.addEventListener('click', () => {
+      notifDropdown.classList.toggle('hidden');
+    });
+
+    window.addEventListener('click', (e) => {
+      if (!notifBtn.contains(e.target) && !notifDropdown.contains(e.target)) {
+        notifDropdown.classList.add('hidden');
+      }
+    });
+
+    function showSection(section) {
+      const profileTab = document.getElementById('profileTab');
+      const cafeTab = document.getElementById('cafeTab');
+      const profileSection = document.getElementById('profileSection');
+      const cafeSection = document.getElementById('cafeSection');
+
+      if (section === 'profile') {
+        profileSection.classList.remove('hidden');
+        cafeSection.classList.add('hidden');
+        profileTab.classList.add('text-pink-500', 'border-b-2', 'border-pink-500');
+        cafeTab.classList.remove('text-pink-500', 'border-b-2', 'border-pink-500');
+        cafeTab.classList.add('text-gray-500');
+      } else {
+        cafeSection.classList.remove('hidden');
+        profileSection.classList.add('hidden');
+        cafeTab.classList.add('text-pink-500', 'border-b-2', 'border-pink-500');
+        profileTab.classList.remove('text-pink-500', 'border-b-2', 'border-pink-500');
+        profileTab.classList.add('text-gray-500');
+      }
+    }
+    document.addEventListener('DOMContentLoaded', () => showSection('profile'));
+  </script>
+
+</body>
+</html>
