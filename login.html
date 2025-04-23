@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login- Mokafe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-[#1c1c1c] font-sans">
+  
+<!-- Navbar -->
+<nav class="flex items-center justify-between px-6 py-4 shadow-sm border-b bg-white">
+  <div class="flex items-center space-x-2">
+    <img src="FotoHome/LOGOMOKAFE.png" alt="Logo" class="h-12 sm:h-8 w-auto" />
+  </div>
+  <div class="flex justify-center flex-grow">
+    <ul class="flex space-x-6 text-sm sm:text-base">
+      <li><a href="index.html" class="text-gray-600 hover:text-pink-500">Home</a></li>
+      <li><a href="login.html" class="text-pink-500 font-semibold">Login</a></li>
+      <li><a href="signup.html" class="text-gray-600 hover:text-pink-500">Sign Up</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Main -->
+  <main class="flex justify-center items-center min-h-screen px-2 py-6">
+    <div class="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 md:p-8 space-y-6">
+      <div class="text-center space-y-2">
+        <h2 class="text-2xl font-semibold">Selamat Datang di Mokafe!</h2>
+        <p class="text-sm text-gray-500">Gabung dan nikmati kopi yang lebih personal dengan akun Mokafe kamu.</p>
+      </div>
+
+      <div class="space-y-5">
+        <input id="email" type="email" placeholder="Username atau Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b08868]" />
+        <input id="password" type="password" placeholder="Password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b08868]" />
+
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-2">
+          <button onclick="handleLogin()" class="w-full sm:w-1/2 bg-[#5c3a2e] text-white px-4 py-3 rounded-lg font-medium hover:bg-[#472d23] transition">Log In</button>
+          <a href="signup.html" class="w-full sm:w-1/2 text-center bg-white border border-[#5c3a2e] text-[#5c3a2e] px-4 py-3 rounded-lg font-medium hover:bg-[#fdf8f5] transition">Sign Up</a>
+        </div>
+
+        <div class="flex justify-center mt-4">
+          <button onclick="alert('Login dengan Google!')" class="flex items-center gap-3 px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-white hover:bg-gray-50 transition">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="h-5" alt="Google" />
+            <span class="text-sm text-gray-700">Sign in with Google</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white py-10 px-6 border-t text-sm">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+      <div>
+        <img src="FotoHome/LOGOMOKAFE.png" alt="Logo" class="h-8 mb-3" />
+        <p class="font-semibold mb-1">Customer Center</p>
+        <p>Gedung Graha Ganesha<br>Jl. Hayam Wuruk No. 28, Jakarta Pusat</p>
+        <p>0812-1111-8456</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-1">Consumer Complaints Service</p>
+        <p>Ministry of Trade of the Republic of Indonesia</p>
+        <p>WhatsApp Ditjen PKTN: 0853-1111-1010</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleLogin() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      const dummyUser = {
+        email: "user@mokafe.com",
+        password: "kopihitam123"
+      };
+
+      if (email === dummyUser.email && password === dummyUser.password) {
+        alert("Login berhasil! Selamat datang di Mokafe.");
+        window.location.href = "index.html";
+      } else {
+        alert("Login gagal. Email atau password salah.");
+      }
+    }
+  </script>
+</body>
+</html>
